@@ -21,148 +21,215 @@ a{
 body{
     font-family: 'Xanh Mono', monospace;
     background-color: rgb(232, 232, 232);
+    width: 90%;
+  margin: 0 auto;   
     
-}
-
-/*Header*/
-img{
-  width: 30vw;
   
 }
 
-header{
+header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   height: 10vh;
-  
   position: sticky;
   top: 0;
-  background-color:rgb(232, 232, 232);
+  background-color: rgb(232, 232, 232);
+  
   
 }
-nav ul{
-  display: flex;
-  justify-content: space-around;
-  width: 40rem;
-  font-size: 1rem;
+
+@media (max-width: 700px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    height: 15vh;
+  }
+  
+  header nav ul{
+    
+    min-width: 90vw;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  
 }
 
-/* Form */
-form{
-  text-align:center;
+header nav ul {
+  display: flex;
+  justify-content: space-around; 
+  width: 40vw;
+}
+
+
+.img {
+  width: 30vw;
+  min-width: 300px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
+}
+
+form div:first-child {
+ 
+  height: 50%;
+  text-align: center;
+}
+form div h1 {
+  margin: auto;
+  padding-top: 22px; 
+  word-wrap: break-word;
+  font-size: 2.2rem;
+}
+form div:nth-child(2) {
+  
+  height: 80%;
   display: flex;
   flex-direction: column;
-  line-height: 3rem;
-  padding: 20px;
 }
-input[type=email]{
-  width: 400px;
-  padding-left: 10px;
+
+form div:nth-child(2) input:nth-child(1) {
   
-  margin: 0 auto 0.5rem auto;
+  margin: 10px auto;
   height: 2rem;
+  border-radius:5px;
+  padding-left: .8rem;
+  margin-top: 20px;
+  min-width: 300px;
 }
-#submit {
-  width: 200px;
-  height: 2rem;
+
+form div:nth-child(2) input:nth-child(2) {
+  width: 20%;
+  margin: 0 auto;
+  height: 40px;
+  border: none;
+  background-color: darkgray;
+  cursor: pointer;
   text-transform: uppercase;
-  
-  margin: 0 auto 2rem auto;
+  border-radius: 5px;
+  font-weight: 700;
+  min-width: 135px;
+}
+
+form div:nth-child(2) input:nth-child(2):hover{
+  color: white;
+  border-bottom: 4px solid gray;
+  border-right: 4px solid gray;
+}
+
+
+.features {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
   
 }
 
-/* Features */
-
-.features{
-   margin-left: 20%;
-  margin-bottom: 20px;
-  font-size: .95rem; 
+.features div {  
+  height: 120px;
+  padding: 25px 0 0 7rem;  
   
 }
 
-.features div{
-  margin-bottom: 2rem;
-  
-  margin-right: 10%;
-  line-height: 1.5rem;
+
+
+
+#features,#how-it-works, #pricing {
+  line-height: 1.4;
 }
 
-/* How it works */
+
+
+#section1 {
+  position: absolute;
+  top: 180px;
+}
 
 .how-it-works {
+    text-align: center;
+}
+
+#section2 {
+  position: absolute;
+  top: 55vh;
+  }
+
+.pricing {
+  display: flex;
+  padding: 50px;
   
-  text-align: center;
+  height: 380px;
 }
 
-/* pricing */
-
-.pricing div{  
-  justify-self: stretch;
+.pricing div{
+  width: 30%;
+  margin-right: 50px;
   border: var(--border);
-}
-
-.pricing{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);  
-  grid-gap: 20px;
-  grid-template-rows: 33vh;
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 50px;
-  justify-items: center;
-}
-
-.pricing div h1 {
-  background-color: rgb(206, 206, 206);
   text-align: center;
-  height: 50px;
-  padding-top: .6rem;
+  height: 320px;
 }
 
-.pricing div {
-  text-align: center;
-  line-height: 2rem;
+.pricing div h1{
+  background-color: #c5c523;
+  height: 18%;
+  padding-top: 10px;
 }
 
 .pricing div p{
-  margin-top: .7rem;
-}
-
-.pricing div p:not(:nth-child(2)) {
-  line-height: 1.4rem;
-  font-size: .95rem;
+  line-height: 1.5;
+  padding-top: 10px;
 }
 
 .pricing div p:first-of-type {
   font-weight: 900;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
-.pricing div input{
-  height: 2.3rem;
-  width: 7rem;
+.pricing div input {
+  margin-top: 20px;
+  height: 13%;
+  width: 60%;
+   border: none;
+  background-color: darkgray;
+  cursor: pointer;
   text-transform: uppercase;
-  margin-top: 1rem;
-  background: rgb(155, 155, 4);
-  border: none;
-  font-weight: 700;
+  border-radius: 5px;
+}
+
+.pricing div input:hover {
+  color: white;
+  border-bottom: 4px solid gray;
+  border-left: 4px solid gray;
+}
+
+#section3 {
+  position: absolute;
+  top: 100vh;
 }
 
 footer {
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
-  width: 75%;
-  margin: 0 auto;
-  background-color: rgb(188, 188, 188);
-  margin-top: 20px;
-  height: 8vh;
-  justify-content: center;
+  flex-direction: column;
+  margin-right: 7.1vw;
+  background-color: #808080bd;
+  height: 7vh;
+  padding: 10px 30px;
 }
 
-footer ul {
+footer ul{
   display: flex;
-  justify-content: space-around;
-  width: 30%;
+  
+  width: 300px;
+  justify-content: space-between;
+}
+
+footer p{
+  letter-spacing: .2rem;
 }
